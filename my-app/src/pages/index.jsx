@@ -1,4 +1,3 @@
-
 import Name from "./components/Name";
 import Info from "./components/Info";
 

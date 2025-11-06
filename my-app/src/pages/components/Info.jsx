@@ -1,5 +1,5 @@
+import React from 'react';
 
-import React from 'react'
 
 export default function Info(props) {
   return (
@@ -8,11 +8,11 @@ export default function Info(props) {
         <p>{props.descripcion}</p>
     </div>
     <div>
-        <p>{
-            props.tipo.map(t => { //se pone una T de tipo, se podría poner cualquier cosa
-                return <span className='tipo'>{t}</span>
+        <ul>{
+            props.tipo.map((tipo, index) => { //se pone una T de tipo, se podría poner cualquier cosa
+                return <li key={index} className={tipo === 'fuego' ? 'fuego' : 'tierra'}>{tipo}</li>
             })
-            }</p>
+            }</ul>
     </div>
     </>
   )
