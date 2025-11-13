@@ -1,32 +1,26 @@
-import Name from "./components/Name";
-import Info from "./components/Info";
 import Link from 'next/link'
+import Pokemons from './components/Pokemons';
+import Favoritos from './components/Favoritos';
 
 export default function Home() {
 
-const getPokemonInfo = () => {
-  return {
-    nombrePokemon: 'Charizard',
-    descripcionPokemon: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ligula magna, elementum quis lorem rhoncus, ullamcorper elementum felis. Etiam maximus ante vel enim vestibulum ornare. Nam eget vulputate dui. Nullam viverra nulla id pulvinar euismod. Fusce lorem velit, egestas ac efficitur nec, mattis et metus.',
-    tipo: ['fuego', 'tierra'],
-  }
-}
-const pokemonInfo = getPokemonInfo()
-
   return (
     <>
-    <Name name={pokemonInfo.nombrePokemon}/>
-    <Info descripcion={pokemonInfo.descripcionPokemon} tipo={pokemonInfo.tipo}/>
-    <h1>Router de Next</h1>
+    <h1>Pagina Pokemons</h1>
     <ul>
       <li>
-        <Link href={'/name'}>Name</Link> 
+        <Link href={'/CreationPage'}>Creación Pokemon</Link> 
       </li>
       <li>
-        <Link href={'/info'}>Info</Link> 
+        <Link href={'/ContactPage'}>Contacto</Link> 
       </li>
     </ul>
-    
+    <div>
+      <Pokemons />
+    </div>
+    <div>
+      <Favoritos />
+    </div>
     </>
   );
 }
