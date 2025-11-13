@@ -1,5 +1,6 @@
 import Name from "./components/Name";
 import Info from "./components/Info";
+import Link from 'next/link'
 
 export default function Home() {
 
@@ -16,6 +17,16 @@ const pokemonInfo = getPokemonInfo()
     <>
     <Name name={pokemonInfo.nombrePokemon}/>
     <Info descripcion={pokemonInfo.descripcionPokemon} tipo={pokemonInfo.tipo}/>
+    <h1>Router de Next</h1>
+    <ul>
+      <li>
+        <Link href={'/name'}>Name</Link> 
+      </li>
+      <li>
+        <Link href={'/info'}>Info</Link> 
+      </li>
+    </ul>
+    
     </>
   );
 }
