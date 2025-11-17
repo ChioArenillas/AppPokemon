@@ -1,12 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import { getPokemonsById } from '../api/userFectch';
 
+export default function PokemonDetail({pokemonId}) {
 
-export default function PokemonDetail(props) {
-  return (
-    <div>
-      <h2>Detalle Pokemons</h2>
-      <p>botón para ELIMINAR + EDITAR el pokemon y que me
-devuelva a la pantalla index cuando lo elimine</p> {/* Este botón no se si va en el componente o en la página */}
-    </div>
+    const [pokemonLocal, setPokemonLocal] = useState({})
+  
+    useEffect(() => {
+      let pokemonAux = getPokemonsById(pokemonId)
+      setPokemonLocal(pokemonAux)
+    }, [])
+  
+    return (
+      <div>
+        <div>
+          <span>Name: {pokemonLocal?.name}</span>
+        </div>
+        <div>
+          <span>Height: {pokemonLocal?.height}</span>
+        </div>
+        <div>
+          <span>Weight: {pokemonLocal?.weight}</span>
+        </div>
+        <div>
+          <span>Type: {pokemonLocal?.type}</span>
+        </div>
+        <div>
+          <span>Description: {pokemonLocal?.description}</span>
+        </div>
+      </div>
   )
 }

@@ -1,11 +1,22 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function ContactPage() {
   return (
     <div>
-      <h2>Página de Contacto</h2>
-      <p>La pantalla de contacto debe ser una pantalla donde aparezca información
-vuestra: Nombre, apellidos y ciudad, email...</p>
+      <div>
+        <h2>CONTACTO</h2>
+      </div>
+      <div>
+        <p>Rocio Arenillas</p>
+        <p>Madrid</p>
+        <p>rocio.arenillas@gmail.com</p>
+      </div>
+      <div>
+      <Link href={{
+          pathname:'/'
+          }}>Back to Homepage</Link>
+      </div>
     </div>
   )
 }
