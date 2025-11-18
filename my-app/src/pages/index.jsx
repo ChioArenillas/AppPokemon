@@ -1,21 +1,21 @@
 import Link from 'next/link'
 import Pokemons from './components/Pokemons';
-import Favoritos from './components/Favoritos';
-import { getPokemons } from './api/userFectch';
-import { useEffect, useState } from 'react';
+import Favourits from './components/Favourits';
+import { useState } from 'react';
 
 export default function Home() {
 
-  const [pokemons, setPokemons] = useState([])
+  const [favourites, setFavourites] = useState([])
 
-  useEffect(() => {
-    let pokemonsAux = getPokemons()
-    setPokemons(pokemonsAux)
-  }, [])
+  const addFavourite = (pokemon) => {
+    if (!favourites.find(f => f.id === pokemon.id)) {
+      setFavourites([...favourites, pokemon])
+    }
+  }
 
-    /* const addPokemonFavourite = () => {
-      addPokemonFavourite ()
-    } */
+  const deleteFavourite = (pokemon) => {
+    setFavourites(favourites.filter(f => f.id !== pokemon.id));
+  };
 
   return (
     <>
@@ -29,30 +29,10 @@ export default function Home() {
       </li>
     </ul>
     <div>
-      <h3>
-        All Pokemons
-      </h3>
-      {
-        pokemons.map((pokemon, index) => {
-          return <div key={index} >
-          <span>{pokemon.id} </span>
-          <span>{pokemon.name} </span>
-          <span>{pokemon.url} </span>
-          <span>
-            <Link href={{
-              pathname: 'DetailPage',
-              query: {
-                id: pokemon.id
-              }
-            }}>Go to Pokemon Details</Link>
-          </span>
-          <button /* onClick={addPokemonFavourite} */>Add to Favorite</button>
-          </div>
-        })
-      }
+      <Pokemons addFavourite={addFavourite} favourites={favourites} />
     </div>
     <div>
-      <Favoritos />
+      <Favourits favourites={favourites} deleteFavourite={deleteFavourite} />
     </div>
     </>
   );

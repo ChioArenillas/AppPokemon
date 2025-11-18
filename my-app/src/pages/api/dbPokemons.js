@@ -2,7 +2,6 @@ export let pokemons = [
     {
         id: 1,
         name: 'Bulbasaur',
-        URL: '',
         height: 0.7,
         weight: 6.9,
         type: ['Grass', 'Poison'],
@@ -11,7 +10,6 @@ export let pokemons = [
     {
         id: 4,
         name: 'Charmander',
-        URL: '',
         height: 0.6,
         weight: 8.5,
         type: ['Fire'],
@@ -20,7 +18,6 @@ export let pokemons = [
     {
         id: 7,
         name: 'Squirtle',
-        URL: '',
         height: 0.5,
         weight: 9.0,
         type: ['Water'],
@@ -29,7 +26,6 @@ export let pokemons = [
     {
         id: 25,
         name: 'Pikachu',
-        URL: '',
         height: 0.4,
         weight: 6.0,
         type: ['Electric'],
@@ -38,7 +34,6 @@ export let pokemons = [
     {
         id: 39,
         name: 'Jigglypuff',
-        URL: '',
         height: 0.5,
         weight: 5.5,
         type: ['Normal', 'Fairy'],
@@ -47,7 +42,6 @@ export let pokemons = [
     {
         id: 52,
         name: 'Meowth',
-        URL: '',
         height: 0.4,
         weight: 4.2,
         type: ['Normal'],
@@ -56,7 +50,6 @@ export let pokemons = [
     {
         id: 54,
         name: 'Psyduck',
-        URL: '',
         height: 0.8,
         weight: 19.6,
         type: ['Water'],
@@ -65,7 +58,6 @@ export let pokemons = [
     {
         id: 66,
         name: 'Machop',
-        URL: '',
         height: 0.8,
         weight: 19.5,
         type: ['Fighting'],
@@ -74,7 +66,6 @@ export let pokemons = [
     {
         id: 74,
         name: 'Geodude',
-        URL: '',
         height: 0.4,
         weight: 20.0,
         type: ['Rock', 'Ground'],
@@ -83,7 +74,6 @@ export let pokemons = [
     {
         id: 133,
         name: 'Eevee',
-        URL: '',
         height: 0.3,
         weight: 6.5,
         type: ['Normal'],

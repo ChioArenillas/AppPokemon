@@ -4,8 +4,7 @@ export const getPokemons = () => {
     return pokemons.map(pokemon => {
         return {
             id: pokemon.id,
-            name: pokemon.name,
-            URL: pokemon.URL
+            name: pokemon.name
         }
     })
 }
@@ -30,13 +29,4 @@ export const deletePokemonById = (idPokemon) => {
     let pokemonAux = pokemons.findIndex(p => p.id == idPokemon)
     pokemons.splice(pokemonAux, 1)
 }
-/* export const addPokemonFavourite = (id, name, height, weight, type, description) => {
-    pokemons.push({
-        id: id,
-        name: name,
-        height: height,
-        weight: weight,
-        type: type,
-        description: description
-    })
-} */
+
