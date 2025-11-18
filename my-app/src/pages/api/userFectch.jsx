@@ -14,6 +14,10 @@ export const getPokemonsById = (idParam) => {
     return pokemonAux
 }
 
+export const getNextId = () => {
+    if (pokemons.length === 0) return 1
+    return Math.max(...pokemons.map(p => Number(p.id))) + 1
+}
 export const addPokemon = (id, name, height, weight, type, description) => {
     pokemons.push({
         id: id,

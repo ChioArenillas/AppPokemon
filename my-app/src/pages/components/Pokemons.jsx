@@ -17,7 +17,7 @@ export default function Pokemons({ addFavourite, favourites }) {
   }, [])
 
   return (
-    <>
+    <div className='pokemon-section'>
       <h2 className='subtitle'>All Pokemons</h2>
       <div className='pokemons-list'>
       {
@@ -42,7 +42,7 @@ export default function Pokemons({ addFavourite, favourites }) {
         )})
       }
       </div>
-    </>
+    </div>
   )
 }
 

@@ -44,9 +44,6 @@ export default function Edit({ pokemonId }) {
             </div>
             <div className='change'>
                 <div>
-                    <button onClick={changeName}>Change Name</button>
-                </div>
-                <div>
                     {
                         error ?
                             <div>
@@ -63,6 +60,9 @@ export default function Edit({ pokemonId }) {
                             :
                             null
                     }
+                </div>
+                <div>
+                    <button onClick={changeName}>Change Name</button>
                 </div>
             </div>
         </div>

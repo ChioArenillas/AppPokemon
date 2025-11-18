@@ -30,12 +30,12 @@ export default function Home() {
   return (
     <div className='page'>
     <h1 className='title'>POKEMONS</h1>
-    <div>
+    <div className='menu'>
       <button>
-        <Link className='button-link' href={'/CreationPage'}>Pokemon Creation</Link> 
+        <Link className='button-link' href={'/AddPage'}>ADD POKEMON</Link> 
       </button>
       <button>
-        <Link className='button-link' href={'/ContactPage'}>Contact</Link> 
+        <Link className='button-link' href={'/ContactPage'}>CONTACT</Link> 
       </button>
     </div>
     <div>

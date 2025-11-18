@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { addPokemon } from './api/userFectch'
+import { addPokemon, getNextId } from './api/userFectch'
 
-export default function CreationPage() {
+export default function AddPage() {
 
   const router = useRouter()
 
@@ -14,9 +14,12 @@ export default function CreationPage() {
   const [type, setType] = useState('')
   const [description, setDescription] = useState('')
 
-  const idHandler = (e) => {
-    setId(e.target.value)
-  }
+  const [error, setError] = useState(false)
+  useEffect(() => {
+    const nextId = getNextId()
+    setId(nextId)
+  }, [])
+
   const nameHandler = (e) => {
     setName(e.target.value)
   }
@@ -33,6 +36,17 @@ export default function CreationPage() {
     setDescription(e.target.value)
   }
   const addPokemonClick = () => {
+    if(
+      id === '' ||
+      name === '' ||
+      weight === '' ||
+      type === '' ||
+      description === ''
+    ){
+      setError(true)
+      return
+    }
+    setError(false)
     addPokemon (id, name, height, weight, type, description)
     router.back()
   }
@@ -40,12 +54,12 @@ export default function CreationPage() {
   return (
     <div className='page'>
       <div>
-        <h2 className='title'>POKEMON CREATION</h2>
+        <h2 className='title'>ADD POKEMON</h2>
       </div>
       <div className='form'>
         <div>
           <span>Id: </span>
-          <input type="text" value={id} onChange={idHandler} />
+          <input type="number" value={id} disabled />
         </div>
         <div>
           <span>Name: </span>
@@ -53,11 +67,11 @@ export default function CreationPage() {
         </div>
         <div>
           <span>Height: </span>
-          <input type="text" value={height} onChange={heightHandler}/>
+          <input type="number" value={height} onChange={heightHandler}/>
         </div>
         <div>
           <span>Weight: </span>
-          <input type="text" value={weight} onChange={weightHandler}/>
+          <input type="number" value={weight} onChange={weightHandler}/>
         </div>
         <div>
           <span>Type: </span>
@@ -68,6 +82,14 @@ export default function CreationPage() {
           <input type="text" value={description} onChange={descriptionHandler}/>
         </div>
       </div>
+      {
+        error && (
+          <div className='error'>
+            <span>Error: empty fields</span>
+
+          </div>
+        )
+      }
       <div>
         <button onClick={addPokemonClick}>Add Pokemon</button>
       </div>
