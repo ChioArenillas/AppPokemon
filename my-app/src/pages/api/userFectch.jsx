@@ -30,3 +30,10 @@ export const deletePokemonById = (idPokemon) => {
     pokemons.splice(pokemonAux, 1)
 }
 
+export const modifyName = (idPokemon, newName) => {
+    pokemons.map(pokemon => {
+        if (pokemon.id == idPokemon){
+            pokemon.name = newName
+        }
+    })
+}

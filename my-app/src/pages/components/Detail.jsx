@@ -22,7 +22,7 @@ export default function PokemonDetail({pokemonId}) {
           <span>Weight: {pokemonLocal?.weight}</span>
         </div>
         <div>
-          <span>Type: {pokemonLocal?.type}</span>
+          <span>Type: {pokemonLocal?.type?.join(', ')}</span>
         </div>
         <div>
           <span>Description: {pokemonLocal?.description}</span>
