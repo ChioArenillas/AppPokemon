@@ -22,9 +22,9 @@ export default function DetailPage() {
   }
   
   return (
-    <div>
+    <div className='page'>
       <div>
-        <h1>POKEMON DETAILS</h1>
+        <h2 className='title'>POKEMON DETAILS</h2>
       </div>
       <div>
         {
@@ -41,12 +41,16 @@ export default function DetailPage() {
     </div>
       <div>
         {!isEditing &&
-          <button onClick={deletePokemon}>Delete pokemon</button>
+          <button  onClick={deletePokemon}>Delete pokemon</button>
         }
           </div>  
-      <Link href={{
-        pathname: '/'
-      }}>Back to Homepage</Link>
+      <div>
+        <button>
+        <Link className='button-link' href={{
+            pathname:'/'
+            }}>Back to Homepage</Link>
+        </button>
+      </div>
     </div>
   )
 }

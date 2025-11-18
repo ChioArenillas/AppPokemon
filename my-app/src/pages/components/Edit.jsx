@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { modifyName } from '../api/userFectch'
 
-export default function Edit({pokemonId}) {
+export default function Edit({ pokemonId }) {
 
     const [newName, setNewName] = useState('')
     const [confirmNewName, setConfirmNewName] = useState('')
@@ -15,52 +15,56 @@ export default function Edit({pokemonId}) {
         setConfirmNewName(e.target.value)
     }
     const changeName = () => {
-        if(newName === confirmNewName){
+        if (newName === confirmNewName) {
             modifyName(pokemonId, newName)
             setError(false)
             setSuccess(true)
             setNewName('')
             setConfirmNewName('')
-        }else{
+        } else {
             setError(true)
             setSuccess(false)
         }
     }
 
-  return (
-    <div>
+    return (
         <div>
-            <h2>Edit Pokemon Name</h2>
-        </div>
-        <div>
-            <label>New Name</label>
-            <input type="text" value={newName} onChange={onChangeNewNameHandle} />
-        </div>
-        <div>
-            <label>Confirm New Name</label>
-            <input type="text" value={confirmNewName} onChange={onChangeConfirmNewNameHandle} />
-        </div>
-        <div>
-            <button onClick={changeName}>Change Name</button>
-        </div>
-        <div>
-            {
-                error ?
+            <div>
+                <h2 className='subtitle'>Edit Pokemon Name</h2>
+            </div>
+            <div className='form'>
                 <div>
-                    <span>Error: Names do not mach</span>
+                    <label>New Name: </label>
+                    <input type="text" value={newName} onChange={onChangeNewNameHandle} />
                 </div>
-                :
-                null
-            }
-            {
-                success ?
                 <div>
-                    <span>Name changed</span>
+                    <label>Confirm New Name: </label>
+                    <input type="text" value={confirmNewName} onChange={onChangeConfirmNewNameHandle} />
                 </div>
-                :
-                null
-            }
+            </div>
+            <div className='change'>
+                <div>
+                    <button onClick={changeName}>Change Name</button>
+                </div>
+                <div>
+                    {
+                        error ?
+                            <div>
+                                <span className='error'>Error: Names do not mach</span>
+                            </div>
+                            :
+                            null
+                    }
+                    {
+                        success ?
+                            <div>
+                                <span className='success'>Name changed</span>
+                            </div>
+                            :
+                            null
+                    }
+                </div>
+            </div>
         </div>
-    </div>
-  )
+    )
 }

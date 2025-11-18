@@ -38,40 +38,46 @@ export default function CreationPage() {
   }
 
   return (
-    <div>
+    <div className='page'>
       <div>
-        <h2>POKEMON CREATION</h2>
+        <h2 className='title'>POKEMON CREATION</h2>
       </div>
-      <div>
-        <span>Id:</span>
-        <input type="text" value={id} onChange={idHandler} />
-      </div>
-      <div>
-        <span>Name:</span>
-        <input type="text" value={name} onChange={nameHandler} />
-      </div>
-      <div>
-        <span>Height:</span>
-        <input type="text" value={height} onChange={heightHandler}/>
-      </div>
-      <div>
-        <span>Weight:</span>
-        <input type="text" value={weight} onChange={weightHandler}/>
-      </div>
-      <div>
-        <span>Type:</span>
-        <input type="text" value={type} onChange={typeHandler} />
-      </div>
-      <div>
-        <span>Description:</span>
-        <input type="text" value={description} onChange={descriptionHandler}/>
+      <div className='form'>
+        <div>
+          <span>Id: </span>
+          <input type="text" value={id} onChange={idHandler} />
+        </div>
+        <div>
+          <span>Name: </span>
+          <input type="text" value={name} onChange={nameHandler} />
+        </div>
+        <div>
+          <span>Height: </span>
+          <input type="text" value={height} onChange={heightHandler}/>
+        </div>
+        <div>
+          <span>Weight: </span>
+          <input type="text" value={weight} onChange={weightHandler}/>
+        </div>
+        <div>
+          <span>Type: </span>
+          <input type="text" value={type} onChange={typeHandler} />
+        </div>
+        <div>
+          <span>Description: </span>
+          <input type="text" value={description} onChange={descriptionHandler}/>
+        </div>
       </div>
       <div>
         <button onClick={addPokemonClick}>Add Pokemon</button>
       </div>
-      <Link href={{
-        pathname: '/'
-      }}>Back to Homepage</Link>
+      <div>
+        <button>
+        <Link className='button-link' href={{
+            pathname:'/'
+            }}>Back to Homepage</Link>
+        </button>
+      </div>
     </div>
   )
 }

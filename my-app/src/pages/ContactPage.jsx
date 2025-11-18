@@ -3,19 +3,21 @@ import React from 'react'
 
 export default function ContactPage() {
   return (
-    <div>
+    <div className='page'>
       <div>
-        <h2>CONTACTO</h2>
+        <h2 className='title'>CONTACT</h2>
       </div>
-      <div>
+      <div className='contactDetails'>
         <p>Rocio Arenillas</p>
         <p>Madrid</p>
         <p>rocio.arenillas@gmail.com</p>
       </div>
       <div>
-      <Link href={{
-          pathname:'/'
-          }}>Back to Homepage</Link>
+        <button>
+        <Link className='button-link' href={{
+            pathname:'/'
+            }}>Back to Homepage</Link>
+        </button>
       </div>
     </div>
   )

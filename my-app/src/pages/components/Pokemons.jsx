@@ -18,29 +18,30 @@ export default function Pokemons({ addFavourite, favourites }) {
 
   return (
     <>
-      <h2>
-        All Pokemons
-      </h2>
+      <h2 className='subtitle'>All Pokemons</h2>
+      <div className='pokemons-list'>
       {
         pokemons.map((pokemon) => {
           const isFavourite = favourites.find(f => f.id === pokemon.id);
-          return <div key={pokemon.id} >
-          <span>{pokemon.id} </span>
-          <span>{pokemon.name} </span>
-          <span>
+          return (
+            <div className='card' key={pokemon.id} >
+          <div>{pokemon.id} </div>
+          <div>{pokemon.name} </div>
+          <div>
             <Link href={{
               pathname: 'DetailPage',
               query: {
                 id: pokemon.id
               }
             }}>Details</Link>
-          </span>
+          </div>
           {!isFavourite &&(
           <button onClick={() => addFavourite(pokemon)} >Add to Favourites</button>
           )}
           </div>
-        })
+        )})
       }
+      </div>
     </>
   )
 }

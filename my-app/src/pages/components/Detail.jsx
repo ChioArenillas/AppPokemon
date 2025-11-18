@@ -11,21 +11,26 @@ export default function PokemonDetail({pokemonId}) {
     }, [])
   
     return (
-      <div>
+      <div className='details'> 
         <div>
-          <span>Name: {pokemonLocal?.name}</span>
+          <span className='detail-title'>Name: </span>
+          <span>{pokemonLocal?.name}</span>
         </div>
         <div>
-          <span>Height: {pokemonLocal?.height}</span>
+          <span className='detail-title'>Height: </span>
+          <span>{pokemonLocal?.height}</span>
         </div>
         <div>
-          <span>Weight: {pokemonLocal?.weight}</span>
+          <span className='detail-title'>Weight: </span>
+          <span>{pokemonLocal?.weight}</span>
         </div>
         <div>
-          <span>Type: {pokemonLocal?.type?.join(', ')}</span>
+          <span className='detail-title'>Type: </span>
+          <span>{pokemonLocal?.type?.join(', ')}</span>
         </div>
         <div>
-          <span>Description: {pokemonLocal?.description}</span>
+          <span className='detail-title'>Description: </span>
+          <span>{pokemonLocal?.description}</span>
         </div>
       </div>
   )
