@@ -16,6 +16,7 @@ export default function Pokemons({ addFavourite, favourites }) {
     setPokemons(pokemonsAux)
   }, [])
 
+  
   return (
     <div className='pokemon-section'>
       <h2 className='subtitle'>All Pokemons</h2>
@@ -35,6 +36,13 @@ export default function Pokemons({ addFavourite, favourites }) {
           </div>
           <div>{pokemon.id} </div>
           <div>{pokemon.name} </div>
+        <div className="types">
+          {pokemon?.type?.map((t, index) => (
+            <span key={index} className={`type-badge ${t.toLowerCase()}`}>
+              {t}
+            </span>
+          ))}
+      </div> 
           {!isFavourite &&(
           <button onClick={() => addFavourite(pokemon)} >Add to Favourites</button>
           )}

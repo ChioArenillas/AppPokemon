@@ -5,7 +5,8 @@ export const getPokemons = () => {
         return {
             img: pokemon.img,
             id: pokemon.id,
-            name: pokemon.name
+            name: pokemon.name,
+            type: pokemon.type
         }
     })
 }

@@ -32,7 +32,8 @@ export default function PokemonDetail({ pokemonId }) {
             </span>
           ))}
         </div>
-      </div>        <div>
+      </div>        
+      <div>
         <span className='detail-title'>Description: </span>
         <span>{pokemonLocal?.description}</span>
       </div>

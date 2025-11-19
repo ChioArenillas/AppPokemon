@@ -1,13 +1,4 @@
 
-
-
-/* FALTAAAAA
-que si el el formulario de creación le dan a crear estando vacío salte error y no te deje
-que en el formulario de creación solo te deje meter números, o por ej en el tipo que esté preseleccionado
-*/
-
-
-
 import Link from 'next/link'
 import Pokemons from './components/Pokemons';
 import Favourits from './components/Favourits';
