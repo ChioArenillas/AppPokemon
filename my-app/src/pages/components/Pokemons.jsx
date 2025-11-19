@@ -19,7 +19,7 @@ export default function Pokemons({ addFavourite, favourites }) {
   
   return (
     <div className='pokemon-section'>
-      <h2 className='subtitle'>All Pokemons</h2>
+      <h2 className='subtitle'>All Pokemon</h2>
       <div className='pokemons-list'>
       {
         pokemons.map((pokemon) => {

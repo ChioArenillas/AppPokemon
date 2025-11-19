@@ -42,7 +42,7 @@ export default function DetailPage() {
     </div>
       <div>
         {!isEditing &&
-          <button  onClick={deletePokemon}>Delete pokemon</button>
+          <button  onClick={deletePokemon}>Delete Pokemon</button>
         }
           </div>  
       <div>

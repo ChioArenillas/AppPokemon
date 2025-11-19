@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className='page'>
-    <h1 className='title'>POKEMONS</h1>
+    <h1 className='title'>POKEMON</h1>
     <div className='menu'>
       <button>
         <Link className='button-link' href={'/AddPage'}>ADD POKEMON</Link> 
