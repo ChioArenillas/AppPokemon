@@ -15,17 +15,17 @@ export default function Favourits({ favourites, deleteFavourite }) {
           )}
           {favourites.length > 0 && favourites.map((pokemon) => {
             return <div className='card' key={pokemon.id} >
+          <div>
+            <Link href={{
+              pathname: 'DetailPage',
+              query: {
+                id: pokemon.id
+              }
+            }}><img className='pokemon-img-card' src={pokemon.img} alt={pokemon.name} /></Link>
+          </div>
             <div>{pokemon.id} </div>
             <div>{pokemon.name} </div>
-            <div>
-              <Link href={{
-                pathname: 'DetailPage',
-                query: {
-                  id: pokemon.id
-                }
-              }}>Details</Link>
-          </div>
-          <button onClick={() => deleteFavourite(pokemon)} >Delete from Favourites</button>
+          <button onClick={() => deleteFavourite(pokemon)} >Remove from Favourites</button>
           </div>
         })
       }

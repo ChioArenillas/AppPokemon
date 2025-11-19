@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Detail from './components/Detail'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { deletePokemonById   } from './api/userFectch'
+import { getPokemonsById, deletePokemonById   } from './api/userFectch'
 import Edit from './components/Edit'
 
 export default function DetailPage() {
@@ -20,11 +20,12 @@ export default function DetailPage() {
   const toggleEdit = () => {
     setIsEditing(!isEditing)
   }
+  const pokemon = getPokemonsById(id)
   
   return (
     <div className='page'>
       <div>
-        <h2 className='title'>POKEMON DETAILS</h2>
+        <h2 className='title'>{pokemon?.name}</h2>
       </div>
       <div>
         {

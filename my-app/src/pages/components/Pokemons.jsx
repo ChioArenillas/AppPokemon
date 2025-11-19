@@ -25,16 +25,16 @@ export default function Pokemons({ addFavourite, favourites }) {
           const isFavourite = favourites.find(f => f.id === pokemon.id);
           return (
             <div className='card' key={pokemon.id} >
-          <div>{pokemon.id} </div>
-          <div>{pokemon.name} </div>
           <div>
             <Link href={{
               pathname: 'DetailPage',
               query: {
                 id: pokemon.id
               }
-            }}>Details</Link>
+            }}><img className='pokemon-img-card' src={pokemon.img} alt={pokemon.name} /></Link>
           </div>
+          <div>{pokemon.id} </div>
+          <div>{pokemon.name} </div>
           {!isFavourite &&(
           <button onClick={() => addFavourite(pokemon)} >Add to Favourites</button>
           )}

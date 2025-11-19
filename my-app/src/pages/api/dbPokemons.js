@@ -2,6 +2,7 @@ export let pokemons = [
     {
         id: 1,
         name: 'Bulbasaur',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png',
         height: 0.7,
         weight: 6.9,
         type: ['Grass', 'Poison'],
@@ -10,6 +11,7 @@ export let pokemons = [
     {
         id: 2,
         name: 'Charmander',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/004.png',
         height: 0.6,
         weight: 8.5,
         type: ['Fire'],
@@ -18,6 +20,7 @@ export let pokemons = [
     {
         id: 3,
         name: 'Squirtle',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/007.png',
         height: 0.5,
         weight: 9.0,
         type: ['Water'],
@@ -26,6 +29,7 @@ export let pokemons = [
     {
         id: 4,
         name: 'Pikachu',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png',
         height: 0.4,
         weight: 6.0,
         type: ['Electric'],
@@ -34,6 +38,7 @@ export let pokemons = [
     {
         id: 5,
         name: 'Jigglypuff',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/039.png',
         height: 0.5,
         weight: 5.5,
         type: ['Normal', 'Fairy'],
@@ -42,6 +47,7 @@ export let pokemons = [
     {
         id: 6,
         name: 'Meowth',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/052.png',
         height: 0.4,
         weight: 4.2,
         type: ['Normal'],
@@ -50,6 +56,7 @@ export let pokemons = [
     {
         id: 7,
         name: 'Psyduck',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/054.png',
         height: 0.8,
         weight: 19.6,
         type: ['Water'],
@@ -58,6 +65,7 @@ export let pokemons = [
     {
         id: 8,
         name: 'Machop',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/066.png',
         height: 0.8,
         weight: 19.5,
         type: ['Fighting'],
@@ -66,6 +74,7 @@ export let pokemons = [
     {
         id: 9,
         name: 'Geodude',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/074.png',
         height: 0.4,
         weight: 20.0,
         type: ['Rock', 'Ground'],
@@ -74,6 +83,7 @@ export let pokemons = [
     {
         id: 10,
         name: 'Eevee',
+        img: 'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/133.png',
         height: 0.3,
         weight: 6.5,
         type: ['Normal'],

@@ -49,14 +49,76 @@ body{
     padding: 10px;
     border-radius: 5px;
 }
+.pokemon-img-card{
+    width: 150px;
+    height: 150px;
+}
+.details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    gap: 5px;   
+    margin: 30px;
+}
 .detail-title{
     font-weight: bold;
 }
-.details{
+.types {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin: 30px;
+    margin: 10px;
+    gap: 8px;
+}
+.type-badge {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.type-badge.grass {
+    background-color: #78C850;
+}
+.type-badge.fire {
+    background-color: #F08030;
+}
+.type-badge.water {
+    background-color: #6890F0;
+}
+.type-badge.poison {
+    background-color: #A040A0;
+}
+.type-badge.electric {
+    background-color: #F8D030;
+    color: black;
+}
+.type-badge.flying {
+    background-color: #A890F0;
+}
+.type-badge.bug {
+    background-color: #A8B820;
+}
+.type-badge.normal {
+    background-color: #A8A878;
+}
+.type-badge.ground {
+    background-color: #E0C068;
+    color: black;
+}
+.type-badge.fairy {
+    background-color: #F4BDC9;
+    color: black;
+}
+.type-badge.fighting {
+    background-color: #e86f6f;
+    color: black;
+}
+.type-badge.rock {
+    background-color: #8d8585;
+    color: black;
 }
 .form{
     display: flex;

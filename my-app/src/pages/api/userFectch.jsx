@@ -3,6 +3,7 @@ import { pokemons } from './dbPokemons'
 export const getPokemons = () => {
     return pokemons.map(pokemon => {
         return {
+            img: pokemon.img,
             id: pokemon.id,
             name: pokemon.name
         }
