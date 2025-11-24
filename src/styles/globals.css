@@ -56,9 +56,9 @@ body{
 .details{
     background-color: rgb(191, 193, 109) ;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     align-items: center;
-    justify-items:flex-start;
+    justify-items:center;
     text-align: center;
     gap: 5px;   
     padding: 20px;
