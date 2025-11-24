@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import { getPokemons } from '../api/userFectch';
+import { getPokemons } from '../pages/api/userFectch';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

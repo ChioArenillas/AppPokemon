@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link'
-import Pokemons from './components/Pokemons';
-import Favourits from './components/Favourits';
+import Pokemons from '../components/Pokemons';
+import Favourits from '../components/Favourits';
 import { useState } from 'react';
 
 export default function Home() {

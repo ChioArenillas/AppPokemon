@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Detail from './components/Detail'
+import Detail from '../components/Detail'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { getPokemonsById, deletePokemonById   } from './api/userFectch'
-import Edit from './components/Edit'
+import Edit from '../components/Edit'
 
 export default function DetailPage() {
 

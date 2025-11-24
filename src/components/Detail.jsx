@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import { getPokemonsById } from '../api/userFectch';
+import { getPokemonsById } from '../pages/api/userFectch';
 
 export default function PokemonDetail({ pokemonId }) {
 
