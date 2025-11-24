@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import { getPokemons } from '../api/userFectch';
 import { useEffect, useState } from 'react';
