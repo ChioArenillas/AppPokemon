@@ -24,6 +24,7 @@ body{
 .subtitle{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .menu{
     display: flex;
@@ -47,6 +48,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: white;
     padding: 10px;
     border-radius: 5px;
