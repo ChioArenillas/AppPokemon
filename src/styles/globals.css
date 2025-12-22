@@ -1,8 +1,8 @@
-body{
+body {
     background-color: rgb(88, 88, 88);
 }
 
-.page{
+.page {
     background-color: rgb(173, 173, 245);
     display: flex;
     flex-direction: column;
@@ -11,7 +11,8 @@ body{
     padding: 50px;
     border-radius: 8px;
 }
-.title{
+
+.title {
     display: flex;
     justify-content: center;
     margin: 0px 0px 10px 0px;
@@ -21,30 +22,35 @@ body{
     border-width: 2px;
     padding: 8px 50px 8px 50px;
 }
-.subtitle{
+
+.subtitle {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.menu{
+
+.menu {
     display: flex;
     gap: 30px;
     margin: 20px;
 }
-.pokemon-section{
+
+.pokemon-section {
     margin: 15px;
     padding: 10px;
     background-color: rgb(191, 193, 109);
     border-radius: 6px;
 }
-.pokemons-list{
+
+.pokemons-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     padding: 20px 0px;
 }
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,31 +58,41 @@ body{
     background-color: white;
     padding: 10px;
     border-radius: 5px;
+    transition: transform 200ms ease-in-out;
 }
-.pokemon-img-card{
+
+.card:hover {
+    transform: scale(1.08);
+}
+
+.pokemon-img-card {
     width: 150px;
     height: 150px;
 }
-.details{
-    background-color: rgb(191, 193, 109) ;
+
+.details {
+    background-color: rgb(191, 193, 109);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     align-items: center;
-    justify-items:center;
+    justify-items: center;
     text-align: center;
-    gap: 10px;   
+    gap: 10px;
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
 }
-.detail-title{
+
+.detail-title {
     font-weight: bold;
 }
+
 .types {
     display: flex;
     margin: 10px;
     gap: 8px;
 }
+
 .type-badge {
     padding: 4px 10px;
     border-radius: 8px;
@@ -89,45 +105,57 @@ body{
 .type-badge.grass {
     background-color: #78C850;
 }
+
 .type-badge.fire {
     background-color: #F08030;
 }
+
 .type-badge.water {
     background-color: #6890F0;
 }
+
 .type-badge.poison {
     background-color: #A040A0;
 }
+
 .type-badge.electric {
     background-color: #F8D030;
     color: black;
 }
+
 .type-badge.flying {
     background-color: #A890F0;
 }
+
 .type-badge.bug {
     background-color: #A8B820;
 }
+
 .type-badge.normal {
     background-color: #A8A878;
 }
+
 .type-badge.ground {
     background-color: #E0C068;
     color: black;
 }
+
 .type-badge.fairy {
     background-color: #F4BDC9;
     color: black;
 }
+
 .type-badge.fighting {
     background-color: #e86f6f;
     color: black;
 }
+
 .type-badge.rock {
     background-color: #8d8585;
     color: black;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -137,41 +165,41 @@ body{
     font-weight: bold;
 }
 
-.change{
+.change {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px;
 }
-.error{
+
+.error {
     font-weight: bold;
     color: rgb(189, 20, 20)
 }
-.success{
+
+.success {
     font-weight: bold;
     color: green;
 }
-button{
+
+button {
     margin: 5px;
     padding: 8px;
     border-radius: 6px;
-    background-color:#6890F0;
+    background-color: #6890F0;
+    transition: transform 200ms ease-in-out;
+
 }
-button:hover{
- cursor: pointer;
+
+button:hover {
+    cursor: pointer;
+    background-color: #4878e8;
+    transform: scale(1.1);
 }
-.button-link{
+
+.button-link {
     color: inherit;
     text-decoration: none;
     font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
