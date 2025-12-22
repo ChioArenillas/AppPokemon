@@ -14,7 +14,7 @@ export default function ContactPage() {
         <div className='contactDetails'>
           <p>Rocio Arenillas</p>
           <p>Madrid</p>
-          <p>rocio.arenillas@gmail.com</p>
+          <p>pokemon@gmail.com</p>
         </div>
         <div>
           <button>
